@@ -12,7 +12,9 @@
 <section id=hero>
 	<div class="hero container">
 		<div>
-			<h1>Hello, My Name is Mark Mondoll</h1>
+			<h1>Hello,</h1>
+			<h1>My Name is </h1>
+			<h1>Mark Mondoll</h1>
 			<a href="#" type="button" class="cta">Portfolio</a>
 		</div>
 		
