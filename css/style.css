@@ -20,9 +20,9 @@ a{
 	align-items: center;
 	justify-content: center;
 }
-/*-Hero Section*/
-#hero{
-	background-image: url(./images/hero-bg.png);
+/* Hero Section */
+#hero{"
+	background-image:url('../images/hero-bg.png');
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -68,14 +68,44 @@ a{
 	color: white;
 	background-color: orange;
 }
-/*-End Hero Section*/
+/* End Hero Section */
 
-/*-Hero Section*/
-/*-Hero Section*/
-/*-Hero Section*/
-/*-Hero Section*/
-/*-Hero Section*/
-/*-Hero Section*/
-/*-Hero Section*/
-/*-Hero Section*/
-/*-Hero Section*/
+/* Header Section */
+
+/* End Header Section */
+
+/* Logo Section */
+
+/* End Logo Section */
+
+/* Menu Section */
+
+/* End Menu Section */
+
+/* Login Section */
+
+/* End Login Section */
+
+/* Service Section */
+
+/* End Service Section */
+
+/* Registration Section */
+
+/* End Registration Section */
+
+/* Employee Section */
+
+/* End Employee Section */
+
+/* Contact Us Section */
+
+/* End Contact Us Section */
+
+/* Footer Section */
+
+/* End Footer Section */
+
+/* Copyright Section */
+
+/* End Copyright Section */

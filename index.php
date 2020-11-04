@@ -8,6 +8,18 @@
 </head>
 <body>
 		<h1>Welcome to Landing Page Website</h1>
+<!--Header Section-->		
+
+<!--End Header Section-->		
+
+<!--Logo Section-->		
+
+<!--End Logo Section-->		
+
+<!--Menu Section-->		
+
+<!--End Menu Section-->		
+
 <!--Hero Section-->		
 <section id=hero>
 	<div class="hero container">
@@ -17,21 +29,9 @@
 			<h1>Mark Mondoll</h1>
 			<a href="#" type="button" class="cta">Portfolio</a>
 		</div>
-		
 	</div>
-	
 </section>
-	<!--Header Section-->		
 
-	<!--End Header Section-->		
-
-	<!--Logo Section-->		
-
-	<!--End Logo Section-->		
-
-	<!--Menu Section-->		
-
-	<!--End Menu Section-->		
 
 <!--End Hero Section-->		
 
@@ -41,7 +41,14 @@
 <!--End Login Section-->		
 
 <!--Service Section-->		
-
+<section id="services">
+	<div class="service container">
+		<div class="service-top">
+			<h1 class="secton-title">Services</h1>
+		</div>
+		<div class="service-bottom"></div>
+	</div> 
+</section>
 <!--End Service Section-->	
 
 <!--Registration Section-->		
@@ -49,7 +56,14 @@
 <!--End Registration Section-->		
 
 <!--Employee Section-->		
-
+<section id="employee">
+	<div class="employee container">
+		<div class="employee-top">
+			<h1 class="employee-title">Employee List</h1>
+		</div>
+		<div class="employee-bottom"></div>
+	</div> 
+</section>
 <!--End Employee Section-->		
 
 <!--Contact Us Section-->		
