@@ -50,7 +50,7 @@ include "config.php";
 	<div class="registration container">
 		<div class="registration-top">
 			<h1 class="registration-title">Registration</h1>
-<!--Registration Table-->		
+			<!--Registration Table-->		
 			<form class="was-validated" action="" onsubmit="return true" method="POST">
 				<table class="table table-striped bg-light table-hover table-bordered form-group">
 					<tr class="table-info">
@@ -62,32 +62,32 @@ include "config.php";
 					</tr>
 					<tr>
 						<td>Gender:</td>
-						<td><input class="form-control" type="gender" id="gender" placeholder="Employee Gender" required name="gender"></td>
+						<td><input class="form-control" type="gender" id="gender" placeholder="Employee Gender" name="gender"></td>
 						<td id="GenderError"></td>
 					</tr>
 					<tr>
 						<td>Phone:</td>
-						<td><input class="form-control" type="text" id="phone" placeholder="017xxx or 018xxx" required name="phone"></td>
+						<td><input class="form-control" type="text" id="phone" placeholder="017xxx or 018xxx" name="phone"></td>
 						<td id="PhoneError"></td>
 					</tr>
 					<tr>
 						<td>Email:</td>
-						<td><input class="form-control" type="" id="email1"  placeholder="Employee Email" required name="email"></td>
+						<td><input class="form-control" type="" id="email1"  placeholder="Employee Email" name="email"></td>
 						<td id="EmailError"></td>
 					</tr>
 					<tr>
 						<td>Address:</td>
-						<td><input class="form-control" type="" id="address" placeholder="Employee Address" required name="address"></td>
+						<td><input class="form-control" type="" id="address" placeholder="Employee Address" name="address"></td>
 						<td id="AddressError"></td>
 					</tr>
 					<tr>
 						<td>Username:</td>
-						<td><input class="form-control" type="" id="username"  placeholder="Employee Username" required name="username"></td>
+						<td><input class="form-control" type="" id="username"  placeholder="Employee Username" name="username"></td>
 						<td id="UsernameError"></td>
 					</tr>
 					<tr>
 						<td>Password:</td>
-						<td><input class="form-control" type="" id="password"  placeholder="Employee Password" required name="password"></td>
+						<td><input class="form-control" type="" id="password"  placeholder="Employee Password" name="password"></td>
 						<td id="PasswordError"></td>
 					</tr>
 					<tr class="table-danger">
@@ -95,12 +95,38 @@ include "config.php";
 					</tr>
 				</table>
 			</form>
-<!--End Registration Table-->		
+			<!--End Registration Table-->		
 
 		</div>
 		<div class="registration-bottom"></div>
 	</div> 
 </section>
+
+<!--PHP Code for Registration Section-->		
+<?php 
+if(isset($_POST['registration-submit'])){
+	echo "Form Submit Success <br>";
+	$employeename=$_POST['employeename'];
+	$gender=$_POST['gender'];
+	$phone=$_POST['phone'];
+	$email=$_POST['email'];
+	$address=$_POST['address'];
+	$username=$_POST['username'];
+	$password=$_POST['password'];
+	$sql_insert="INSERT INTO employee (employeename, gender, phone, email, address, username, password) VALUES ('$employeename', '$gender', '$phone','$email', '$address', '$username', '$password')";
+	$x=mysqli_query($conn, $sql_insert);
+	if ($x) {
+		echo "Insert Success";
+	}else{
+		echo "Insertion Failed";
+	}
+
+}else{
+	echo "Form Submit Failed";
+}
+?>
+<!--End PHP Code for Registration Section-->		
+
 <!--End Registration Section-->			
 
 <!--Login Section-->		
@@ -144,13 +170,13 @@ include "config.php";
 			<tbody>
 				<?php 
 				if($conn){
-					$a="SELECT id,name,gender,phone,email,address,username FROM `employee`";
+					$a="SELECT id,employeename,gender,phone,email,address,username FROM `employee`";
 					$x=mysqli_query($conn, $a);
 					if (mysqli_num_rows($x) > 0) { 
 						while ($row=mysqli_fetch_assoc($x)) {?>
 							<tr>
 								<td><?php echo $row['id']; ?></td>
-								<td><?php echo $row['name']; ?></td>
+								<td><?php echo $row['employeename']; ?></td>
 								<td><?php echo $row['gender']; ?></td>
 								<td><?php echo $row['phone']; ?></td>
 								<td><?php echo $row['email']; ?></td>
