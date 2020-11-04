@@ -21,7 +21,7 @@ a{
 	justify-content: center;
 }
 /* Hero Section */
-#hero{"
+#hero{
 	background-image:url('../images/hero-bg.png');
 	background-size: cover;
 	background-position: top center;
@@ -87,7 +87,24 @@ a{
 /* End Login Section */
 
 /* Service Section */
-
+#services{
+}
+#services .services{
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#services .services-title{
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+}
 /* End Service Section */
 
 /* Registration Section */
@@ -95,11 +112,49 @@ a{
 /* End Registration Section */
 
 /* Employee Section */
-
+#employee{
+	background-image:url('../images/hero-bg.png');
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+}
+#employee .employee{
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#employee .employee-title{
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+}
 /* End Employee Section */
 
 /* Contact Us Section */
-
+#contact{
+}
+#contact .contact{
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#contact .contact-title{
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+}
 /* End Contact Us Section */
 
 /* Footer Section */
