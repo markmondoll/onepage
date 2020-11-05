@@ -26,7 +26,18 @@ include "config.php";
 <!--End Logo Section-->		
 
 <!--Menu Section-->		
-
+<section id=menu>
+	<div class="mainmenu">
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">About Me</a>
+			<li><a href="">Contact Us</a></li>
+			<li><a href="">Registration</a></li>
+			<li><a href="">Employee List</a></li>
+			<li><a href="">Services</a></li>
+		</ul>
+	</div>
+</section>
 <!--End Menu Section-->		
 
 <!--Hero Section-->		
@@ -209,12 +220,38 @@ if(isset($_POST['registration-submit'])){
 </section>
 <!--End Contact Us Section-->		
 
+<!--About Me Section-->		
+<section id="about">
+	<div class="about container">
+		<div class="col-left">
+			<div class="about-img">
+				<img src="./images/p5.jpg" alt="My Picture">
+			</div>
+		</div>
+		<div class="col-right">
+			<h1 class="section-title">About Me</h1>
+			<h2>Web Developer</h2>
+			<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+			<a href="#" class="cta">Download Resume</a>
+		</div>
+	</div> 
+</section>
+<!--End About Me Section-->	
+
 <!--Footer Section-->		
 
 <!--End Footer Section-->		
 
 <!--Copyright Section-->
-
+<section id="footer">
+	<div class="footer container">
+		<div class="brand">
+			<h1 class="footer-title">Footer Section</h1>
+		</div>
+		<p>&copy All Rights Reserved by NetWeb Computers</p>
+		<div class="footer-bottom"></div>
+	</div> 
+</section>
 <!--End Copyright Section-->	
 
 </body>
