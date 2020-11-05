@@ -26,12 +26,12 @@ include "config.php";
 			<div class="nav-list">
 				<div class="hamburger"><div class="bar"></div></div>
 					<ul>
-						<li><a href="#" data-after="Home">Home</a></li>
-						<li><a href="#" data-after="Registration">Registration</a></li>
-						<li><a href="#" data-after="Employee">Employee List</a></li>
-						<li><a href="#" data-after="Services">Services</a></li>
-						<li><a href="#" data-after="Contact Us">Contact Us</a></li>
-						<li><a href="#" data-after="About Me">About Me</a></li>
+						<li><a href="#hero" data-after="Home">Home</a></li>
+						<li><a href="#registration" data-after="Registration">Registration</a></li>
+						<li><a href="#employee" data-after="Employee">Employee List</a></li>
+						<li><a href="#services" data-after="Services">Services</a></li>
+						<li><a href="#contact" data-after="Contact Us">Contact Us</a></li>
+						<li><a href="#about" data-after="About Me">About Me</a></li>
 					</ul>
 			</div>
 		</div>
