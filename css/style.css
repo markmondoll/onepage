@@ -9,6 +9,7 @@
 html{
 	font-size: 10px;
 	font-family: 'Roboto', sans-serif;
+	scroll-behavior: smooth;
 }
 a{
 	text-decoration: none;
@@ -34,6 +35,7 @@ a{
 	background-color: rgba(31, 30, 30, 0.24);
 	transition: .3s ease background-color;
 }
+/* Logo/Brand Section */
 #header .nav-bar{
 	display: flex;
 	align-items: center;
@@ -43,6 +45,8 @@ a{
 	max-width: 1300px;
 	padding: 0 10px;
 }
+/* End Logo/Brand Section */
+
 #header .nav-list ul{
 	list-style: none;
 	position: absolute;
@@ -92,6 +96,7 @@ a{
 	color: crimson;
 }
 /* End Header Section */
+
 
 /*  Hamburger Section */
 #header .hamburger{
@@ -202,14 +207,6 @@ a{
 }
 /* End Hero Section */
 
-/* Header Section */
-
-/* End Header Section */
-
-/* Logo Section */
-
-/* End Logo Section */
-
 /* Login Section */
 
 /* End Login Section */
@@ -249,6 +246,10 @@ a{
 	margin: 0 auto;
 	padding: 100px 0;
 }
+#services .services-top{
+	max-width: 500px;
+	margin: 0 auto;
+}
 #services .services-title{
 	font-size: 4rem;
 	font-weight: 300;
@@ -259,6 +260,7 @@ a{
 	text-align: center;
 }
 /* End Service Section */
+
 
 /* Employee Section */
 #employee{
@@ -285,6 +287,7 @@ a{
 }
 /* End Employee Section */
 
+
 /* Contact Us Section */
 #contact{
 }
@@ -305,6 +308,7 @@ a{
 	text-align: center;
 }
 /* End Contact Us Section */
+
 
 /* About Me Section */
 #about .about{
@@ -381,10 +385,42 @@ a{
 
 
 
-	/* contact */
+/* contact */
+#contact .contact{
+	flex-direction: column;
+	padding: 100px 0;
+	align-items: center;
+	justify-content: center;
+	min-width: 20vh;
+}
+#contact .contact-items{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: ;
+	margin: 0;
+}
+#contact .contact-item{
+	width: 30%;
+	margin: 0;
+	flex-direction: row;
+}
+#contact .contact-item .icon{
+	height: 100px;
+	width: 100%;
+}
+#contact .contact-item .icon img{
+	object-fit: contain;
+}
+#contact .contact-item contact-info{
+	width: 100%;
+	text-align: left;
+	padding-left: 20px;
+}
 
-
-	/* End contact */
+/* End contact */
+}
+}
 
 
 /* End Media Query for Tablet */

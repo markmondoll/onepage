@@ -20,9 +20,13 @@ include "config.php";
 <section id="header">
 	<div class="header container">
 		<div class="nav-bar">
+		<!--Logo/Brand Section-->		
 			<div class="brand">
 				<a href="#hero"><h1>NetWeb Computers</h1></a>
 			</div>
+		<!--End Logo Section-->	
+
+		<!--Menu Section-->			
 			<div class="nav-list">
 				<div class="hamburger"><div class="bar"></div></div>
 					<ul>
@@ -30,18 +34,15 @@ include "config.php";
 						<li><a href="#registration" data-after="Registration">Registration</a></li>
 						<li><a href="#employee" data-after="Employee">Employee List</a></li>
 						<li><a href="#services" data-after="Services">Services</a></li>
+						<li><a href="#about" data-after="About Me">About Me</a></li>						
 						<li><a href="#contact" data-after="Contact Us">Contact Us</a></li>
-						<li><a href="#about" data-after="About Me">About Me</a></li>
 					</ul>
 			</div>
+		<!--End Menu Section-->			
 		</div>
 	</div>
 </section>
 <!--End Header Section-->		
-
-<!--Logo Section-->		
-
-<!--End Logo Section-->		
 
 <!--Hero Section-->		
 <section id=hero>
@@ -50,12 +51,10 @@ include "config.php";
 			<h1>Hello,</h1>
 			<h1>My Name is </h1>
 			<h1>Mark Mondoll</h1>
-			<a href="#" type="button" class="cta">Portfolio</a>
+			<a href="#projects" type="button" class="cta">Portfolio</a>
 		</div>
 	</div>
 </section>
-
-
 <!--End Hero Section-->		
 
 
@@ -212,17 +211,6 @@ if(isset($_POST['registration-submit'])){
 </section>
 <!--End Employee Section-->		
 
-<!--Contact Us Section-->		
-<section id="contact">
-	<div class="contact container">
-		<div class="contact-top">
-			<h1 class="contact-title">Contact Us</h1>
-		</div>
-		<div class="contact-bottom"></div>
-	</div> 
-</section>
-<!--End Contact Us Section-->		
-
 <!--About Me Section-->		
 <section id="about">
 	<div class="about container">
@@ -240,6 +228,17 @@ if(isset($_POST['registration-submit'])){
 	</div> 
 </section>
 <!--End About Me Section-->	
+
+<!--Contact Us Section-->		
+<section id="contact">
+	<div class="contact container">
+		<div class="contact-top">
+			<h1 class="contact-title">Contact Us</h1>
+		</div>
+		<div class="contact-bottom"></div>
+	</div> 
+</section>
+<!--End Contact Us Section-->		
 
 <!--Footer Section-->		
 
