@@ -16,29 +16,32 @@ include "config.php";
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-		<h1>Welcome to Landing Page Website</h1>
 <!--Header Section-->		
-
+<section id="header">
+	<div class="header container">
+		<div class="nav-bar">
+			<div class="brand">
+				<a href="#hero"><h1>NetWeb Computers</h1></a>
+			</div>
+			<div class="nav-list">
+				<div class="hamburger"><div class="bar"></div></div>
+					<ul>
+						<li><a href="#" data-after="Home">Home</a></li>
+						<li><a href="#" data-after="Registration">Registration</a></li>
+						<li><a href="#" data-after="Employee">Employee List</a></li>
+						<li><a href="#" data-after="Services">Services</a></li>
+						<li><a href="#" data-after="Contact Us">Contact Us</a></li>
+						<li><a href="#" data-after="About Me">About Me</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+</section>
 <!--End Header Section-->		
 
 <!--Logo Section-->		
 
 <!--End Logo Section-->		
-
-<!--Menu Section-->		
-<section id=menu>
-	<div class="mainmenu">
-		<ul>
-			<li><a href="">Home</a></li>
-			<li><a href="">About Me</a>
-			<li><a href="">Contact Us</a></li>
-			<li><a href="">Registration</a></li>
-			<li><a href="">Employee List</a></li>
-			<li><a href="">Services</a></li>
-		</ul>
-	</div>
-</section>
-<!--End Menu Section-->		
 
 <!--Hero Section-->		
 <section id=hero>
@@ -101,7 +104,7 @@ include "config.php";
 						<td><input class="form-control" type="" id="password"  placeholder="Employee Password" name="password"></td>
 						<td id="PasswordError"></td>
 					</tr>
-					<tr class="table-danger">
+					<tr class="table-info">
 						<td colspan="3" align="center"><input type="submit" value="Save" id="sub-btn" name="registration-submit"></td>
 					</tr>
 				</table>
@@ -229,7 +232,7 @@ if(isset($_POST['registration-submit'])){
 			</div>
 		</div>
 		<div class="col-right">
-			<h1 class="section-title">About Me</h1>
+			<h1 class="about-title">About Me</h1>
 			<h2>Web Developer</h2>
 			<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
 			<a href="#" class="cta">Download Resume</a>
@@ -243,16 +246,11 @@ if(isset($_POST['registration-submit'])){
 <!--End Footer Section-->		
 
 <!--Copyright Section-->
-<section id="footer">
-	<div class="footer container">
-		<div class="brand">
-			<h1 class="footer-title">Footer Section</h1>
-		</div>
-		<p>&copy All Rights Reserved by NetWeb Computers</p>
-		<div class="footer-bottom"></div>
-	</div> 
-</section>
+	<footer class="blockquote-footer bg-dark text-white" style="padding-top: 10px;padding-bottom: 10px;font-size: 15px;text-align: center;">&copy All Rights Reserved by <a href="https://netwebcomputers.com">NetWeb Computers</a></footer>
 <!--End Copyright Section-->	
 
+<!-- Script Section -->
+<script src="./js/hamburger.js"></script>
+<!-- End Script Section -->
 </body>
 </html>
