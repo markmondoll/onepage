@@ -152,9 +152,31 @@ if(isset($_POST['registration-submit'])){
 <section id="services">
 	<div class="services container">
 		<div class="services-top">
-			<h1 class="services-title">Services</h1>
+			<h1 class="services-title">Serv<span>i</span>ces</h1>
+			<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
 		</div>
-		<div class="services-bottom"></div>
+		<div class="services-bottom">
+			<div class="services-item">
+				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
+				<h2>Web Design</h2>
+				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+			</div>
+			<div class="services-item">
+				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
+				<h2>Web Development</h2>
+				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+			</div>
+			<div class="services-item">
+				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
+				<h2>WordPress Customization</h2>
+				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+			</div>
+			<div class="services-item">
+				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
+				<h2>Web Design</h2>
+				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+			</div>
+		</div>
 	</div> 
 </section>
 <!--End Service Section-->	
@@ -163,9 +185,30 @@ if(isset($_POST['registration-submit'])){
 <section id="projects">
 	<div class="projects container">
 		<div class="projects-header">
-			<h1 class="projects-title">Projects</h1>
+			<h1 class="projects-title">Pro<span>j</span>ects</h1>
 		</div>
-		<div class="projects-bottom"></div>
+		<div class="projects-bottom">
+			<div class="projects-item">
+				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
+				<h2>Web Design</h2>
+				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+			</div>
+			<div class="projects-item">
+				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
+				<h2>Web Development</h2>
+				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+			</div>
+			<div class="projects-item">
+				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
+				<h2>WordPress Customization</h2>
+				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+			</div>
+			<div class="projects-item">
+				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
+				<h2>Web Design</h2>
+				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+			</div>
+		</div>
 	</div> 
 </section>
 <!--End Projects Section-->	
