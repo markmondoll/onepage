@@ -1,6 +1,8 @@
+/* Default Google Font Link Section */
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 </style>
+/* End of Default Google Font Link Section */
 *{
 	padding: 0;
 	margin: 0;
@@ -261,6 +263,64 @@ a{
 }
 /* End Service Section */
 
+/* Projects Section */
+
+#projects .projects {
+	flex-direction: column;
+	margin: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#projects .projects-header h1{
+	margin-bottom: 50px;
+}
+#projects .all-projects{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#projects .projects-item{
+	display: fle;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+#projects .projects.info{
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	color: white;
+}
+#projects .projects-info h1{
+	font-size: 4rem;
+	font-weight: 500;
+}
+#projects .projects-info h2{
+	font-size: 1.8rem;
+	font-weight: 500px;
+	margin-top: 10px;
+}
+#projects .projects-info p{
+	color: white;
+}
+#projects .projects-img{
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+}
+
+/* End Projects Section */
+
 
 /* Employee Section */
 #employee{
@@ -419,8 +479,7 @@ a{
 }
 
 /* End contact */
-}
-}
+
 
 
 /* End Media Query for Tablet */

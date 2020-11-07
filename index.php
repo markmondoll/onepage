@@ -7,13 +7,19 @@ include "config.php";
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Landing Page</title>
-<!--Bootstrap Section-->		
+<!--Bootstrap Section->		
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!--End Bootstrap Section-->		
+<!-End Bootstrap Section-->	
+
+<!--Stylesheet Section-->		
 	<link rel="stylesheet" href="css/style.css">
+<!--End of Stylesheet Section-->		
 </head>
 <body>
 <!--Header Section-->		
@@ -156,6 +162,17 @@ if(isset($_POST['registration-submit'])){
 	</div> 
 </section>
 <!--End Service Section-->	
+
+<!--Projects Section-->		
+<section id="projects">
+	<div class="projects container">
+		<div class="projects-header">
+			<h1 class="projects-title">Projects</h1>
+		</div>
+		<div class="projects-bottom"></div>
+	</div> 
+</section>
+<!--End Projects Section-->	
 
 <!--Employee Section-->		
 <section id="employee">
