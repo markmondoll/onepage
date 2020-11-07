@@ -243,7 +243,7 @@ a{
 }
 	/* Registration Table */
 	#registration .table{
-		width: 600px;
+		width: 100%;
 		font-size: 1.5rem;
 	}
 	#registration .table th{
@@ -372,7 +372,7 @@ a{
 }
 	/* Employee Table */
 	#employee .table{
-		width: 900px;
+		width: 100%;
 	}
 	#employee .table th{
 		background-color: #f0f055;
@@ -384,7 +384,6 @@ a{
 		border: 1px solid black;
 		text-align: left;
 	}
-
 	/* End Employee Table */
 
 /* End Employee Section */
