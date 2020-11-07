@@ -28,7 +28,7 @@ include "config.php";
 		<div class="nav-bar">
 		<!--Logo/Brand Section-->		
 			<div class="brand">
-				<a href="#hero"><h1>NetWeb Computers</h1></a>
+				<a href="#hero"><h1><span>N</span>et<span>W</span>eb <span>C</span>omputers</h1></a>
 			</div>
 		<!--End Logo Section-->	
 
@@ -70,47 +70,43 @@ include "config.php";
 		<div class="registration-top">
 			<h1 class="registration-title">Registration</h1>
 			<!--Registration Table-->		
-			<form class="was-validated" action="" onsubmit="return true" method="POST">
-				<table class="table table-striped bg-light table-hover table-bordered form-group">
-					<tr class="table-info">
+			<form action="" onsubmit="return true" method="POST">
+				<table class="table">
+				<tr>
+					<th colspan="2"><h1>Please write the details information</h1></th>
+				</tr>
+					<tr>
 						<td>Employee Name:</td>
 						<td>
 							<input class="form-control" type="text" id="employeename"  placeholder="Employee Name" required name="employeename">
 						</td>
-						<td id="EmployeeNameError"></td>
 					</tr>
 					<tr>
 						<td>Gender:</td>
 						<td><input class="form-control" type="gender" id="gender" placeholder="Employee Gender" name="gender"></td>
-						<td id="GenderError"></td>
 					</tr>
 					<tr>
 						<td>Phone:</td>
 						<td><input class="form-control" type="text" id="phone" placeholder="017xxx or 018xxx" name="phone"></td>
-						<td id="PhoneError"></td>
 					</tr>
 					<tr>
 						<td>Email:</td>
 						<td><input class="form-control" type="" id="email1"  placeholder="Employee Email" name="email"></td>
-						<td id="EmailError"></td>
 					</tr>
 					<tr>
 						<td>Address:</td>
 						<td><input class="form-control" type="" id="address" placeholder="Employee Address" name="address"></td>
-						<td id="AddressError"></td>
 					</tr>
 					<tr>
 						<td>Username:</td>
 						<td><input class="form-control" type="" id="username"  placeholder="Employee Username" name="username"></td>
-						<td id="UsernameError"></td>
 					</tr>
 					<tr>
 						<td>Password:</td>
 						<td><input class="form-control" type="" id="password"  placeholder="Employee Password" name="password"></td>
-						<td id="PasswordError"></td>
 					</tr>
-					<tr class="table-info">
-						<td colspan="3" align="center"><input type="submit" value="Save" id="sub-btn" name="registration-submit"></td>
+					<tr>
+						<td colspan="2" style="text-align:center"><input type="submit" value="Save" id="sub-btn" name="registration-submit"></td>
 					</tr>
 				</table>
 			</form>
@@ -182,7 +178,7 @@ if(isset($_POST['registration-submit'])){
 		</div>
 <!--Employee Table-->		
 		<div>
-		<table border="1" align="center" class="table table-primary table-striped table-hover" style="text-align: center">
+		<table class="table">
 			<thead class="thead-dark">
 				<tr class="bg-primary">
 					<th colspan="7"><h1>Emoloyee Details</h1></th>

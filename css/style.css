@@ -17,7 +17,7 @@ a{
 	text-decoration: none;
 }
 .container{
-	min-height: 100vh;
+	min-height: 70vh;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -47,6 +47,12 @@ a{
 	max-width: 1300px;
 	padding: 0 10px;
 }
+
+	/* Brand Section */
+
+
+	/* End of Brand Section */
+
 /* End Logo/Brand Section */
 
 #header .nav-list ul{
@@ -215,7 +221,6 @@ a{
 
 /* Registration Section */
 #registration{
-	background-image:url('../images/p4.jpg');
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -236,6 +241,26 @@ a{
 	letter-spacing: .2rem;
 	text-align: center;
 }
+	/* Registration Table */
+	#registration .table{
+		width: 600px;
+		font-size: 1.5rem;
+	}
+	#registration .table th{
+		background-color: #f0f055;
+		border: 1px solid black;
+		text-align: center;
+	}
+	#registration .table tr td{
+		background-color: #f0f0ff;
+		border: 1px solid black;
+		text-align: left;
+	}
+	#registration .form-control{
+		width: 90%;
+	}
+	/* End Registration Table */
+
 /* End Registration Section */
 
 /* Service Section */
@@ -345,6 +370,23 @@ a{
 	letter-spacing: .2rem;
 	text-align: center;
 }
+	/* Employee Table */
+	#employee .table{
+		width: 900px;
+	}
+	#employee .table th{
+		background-color: #f0f055;
+		border: 1px solid black;
+		text-align: center;
+	}
+	#employee .table tr td{
+		background-color: #f0f0ff;
+		border: 1px solid black;
+		text-align: left;
+	}
+
+	/* End Employee Table */
+
 /* End Employee Section */
 
 
