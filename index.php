@@ -87,7 +87,7 @@ include "config.php";
 					</tr>
 					<tr>
 						<td>Phone:</td>
-						<td><input class="form-control" type="text" id="phone" placeholder="017xxx or 018xxx" name="phone"></td>
+						<td><input class="form-control" type="text" id="phone" placeholder="017-xxxxxxxx or 018-xxxxxxxx" name="phone"></td>
 					</tr>
 					<tr>
 						<td>Email:</td>
@@ -128,14 +128,66 @@ if(isset($_POST['registration-submit'])){
 	$address=$_POST['address'];
 	$username=$_POST['username'];
 	$password=$_POST['password'];
-	$sql_insert="INSERT INTO employee (employeename, gender, phone, email, address, username, password) VALUES ('$employeename', '$gender', '$phone','$email', '$address', '$username', '$password')";
-	$x=mysqli_query($conn, $sql_insert);
-	if ($x) {
-		echo "Insert Success";
+	$valid_status=false;
+	if(!empty($employeename)){
+		$valid_status=true;
 	}else{
-		echo "Insertion Failed";
+		$valid_status=false;
 	}
 
+	if(!empty($gender)){
+		$valid_status=true;
+	}else{
+		$valid_status=false;
+	}
+
+	$blk="/^[0]{1}[1]{1}[9]{1}-[0-9]{8}$/";
+	$Gp="/^[0]{1}[1]{1}[7]{1}-[0-9]{8}$/";
+	if(preg_match($blk, $phone)||preg_match($Gp, $phone)) {
+		$valid_status=true;
+		echo("$phone is a valid phone address <br>");
+	}else{
+		$valid_status=false;
+		echo("$phone is Not a valid phone address <br>");
+	}
+
+	if (!empty($email)&&filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		$valid_status=true;
+		echo("$email is a valid email address <br>");
+	} else {
+		$valid_status=false;
+		echo("$email is not a valid email address <br>");
+	}
+
+	if(!empty($address)){
+		$valid_status=true;
+	}else{
+		$valid_status=false;
+	}
+
+	if(!empty($username)){
+		$valid_status=true;
+	}else{
+		$valid_status=false;
+	}
+
+	if(!empty($password)){
+		$valid_status=true;
+	}else{
+		$valid_status=false;
+	}
+
+	if ($valid_status) {
+		$sql_insert="INSERT INTO employee (employeename, gender, phone, email, address, username, password) VALUES ('$employeename', '$gender', '$phone','$email', '$address', '$username', '$password')";
+		$x=mysqli_query($conn, $sql_insert);
+		if ($x) {
+			echo "Insert Success";
+		}else{
+			echo "Insertion Failed";
+		}
+	}else{
+		echo "PHP Validation Failed";
+	}
 }else{
 	echo "Form Submit Failed";
 }
@@ -185,28 +237,57 @@ if(isset($_POST['registration-submit'])){
 <section id="projects">
 	<div class="projects container">
 		<div class="projects-header">
-			<h1 class="projects-title">Pro<span>j</span>ects</h1>
+			<h1 class="projects-title">Recent <span>Projects</span></h1>
 		</div>
 		<div class="projects-bottom">
 			<div class="projects-item">
-				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
-				<h2>Web Design</h2>
-				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+				<div class="prejects-info">
+					<h1>Project 1</h1>
+					<h2>Code is love</h2>
+					<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+				</div>
+				<div class="projects-img">
+					<img src="../images/p5.jpg" alt="img">
+				</div>
 			</div>
 			<div class="projects-item">
-				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
-				<h2>Web Development</h2>
-				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+				<div class="prejects-info">
+					<h1>Project 2</h1>
+					<h2>Code is love</h2>
+					<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+				</div>
+				<div class="projects-img">
+					<img src="../images/p5.jpg" alt="img">
+				</div>
+			</div>
+			<div class="prejects-info">
+					<h1>Project 3</h1>
+					<h2>Code is love</h2>
+					<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+				</div>
+				<div class="projects-img">
+					<img src="../images/p5.jpg" alt="img">
+				</div>
 			</div>
 			<div class="projects-item">
-				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
-				<h2>WordPress Customization</h2>
-				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+				<div class="prejects-info">
+					<h1>Project 4</h1>
+					<h2>Code is love</h2>
+					<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+				</div>
+				<div class="projects-img">
+					<img src="../images/p5.jpg" alt="img">
+				</div>
 			</div>
 			<div class="projects-item">
-				<div class="icon"><img src="https://img.icons8.com/color/48/000000/service.png"/></div>
-				<h2>Web Design</h2>
-				<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+				<div class="prejects-info">
+					<h1>Project 5</h1>
+					<h2>Code is love</h2>
+					<p>WordPress and its plugin are created with PHP and JavaScript, naturally I use my knowledge of these programming languages if you need any specific feature on your website. If you want to change the look or add a design to your WordPress website that is not possible to achieve with a theme I can help you with this using CSS.</p>
+				</div>
+				<div class="projects-img">
+					<img src="../images/p5.jpg" alt="img">
+				</div>
 			</div>
 		</div>
 	</div> 
