@@ -70,46 +70,60 @@ include "config.php";
 		<div class="registration-top">
 			<h1 class="registration-title">Registration</h1>
 			<!--Registration Table-->		
-			<form action="" onsubmit="return true" method="POST">
+			<form action="" onsubmit="return true" method="POST" enctype="multipart/form-data">
 				<table class="table">
 				<tr>
-					<th colspan="2"><h1>Please write the details information</h1></th>
+					<th colspan="3"><h1>Please write the details information</h1></th>
 				</tr>
 					<tr>
 						<td>Employee Name:</td>
-						<td>
+						<td colspan="2">
 							<input class="form-control" type="text" id="employeename"  placeholder="Employee Name" required name="employeename">
 						</td>
 					</tr>
 					<tr>
 						<td>Gender:</td>
-						<td><input class="form-control" type="gender" id="gender" placeholder="Employee Gender" name="gender"></td>
+						<td colspan="2"><input class="form-control" type="gender" id="gender" placeholder="Employee Gender" name="gender"></td>
 					</tr>
 					<tr>
 						<td>Phone:</td>
-						<td><input class="form-control" type="text" id="phone" placeholder="017-xxxxxxxx or 018-xxxxxxxx" name="phone"></td>
+						<td colspan="2"><input class="form-control" type="text" id="phone" placeholder="017-xxxxxxxx or 018-xxxxxxxx" name="phone"></td>
 					</tr>
 					<tr>
 						<td>Email:</td>
-						<td><input class="form-control" type="" id="email1"  placeholder="Employee Email" name="email"></td>
+						<td colspan="2"><input class="form-control" type="" id="email1"  placeholder="Employee Email" name="email"></td>
 					</tr>
 					<tr>
 						<td>Address:</td>
-						<td><input class="form-control" type="" id="address" placeholder="Employee Address" name="address"></td>
+						<td colspan="2"><input class="form-control" type="" id="address" placeholder="Employee Address" name="address"></td>
 					</tr>
 					<tr>
 						<td>Username:</td>
-						<td><input class="form-control" type="" id="username"  placeholder="Employee Username" name="username"></td>
+						<td colspan="2"><input class="form-control" type="" id="username"  placeholder="Employee Username" name="username"></td>
 					</tr>
 					<tr>
 						<td>Password:</td>
-						<td><input class="form-control" type="" id="password"  placeholder="Employee Password" name="password"></td>
+						<td colspan="2"><input class="form-control" type="" id="password"  placeholder="Employee Password" name="password"></td>
 					</tr>
 					<tr>
-						<td colspan="2" style="text-align:center"><input type="submit" value="Save" id="sub-btn" name="registration-submit"></td>
+						<td>Photo:</td>
+						<td colspan="2"><input class="form-control" type="file" id="photo"  placeholder="Upload your passport size photo" name="photo"></td>
+					</tr>
+					<tr>
+						<td>Document:</td>
+						<td colspan="2"><input class="form-control" type="file" id="document"  placeholder="Upload your other document" name="document"></td>
+					</tr>
+					<tr>
+						<td colspan="3" style="text-align:center"><input type="submit" value="Save" id="sub-btn" name="registration-submit"></td>
 					</tr>
 				</table>
 			</form>
+	<div>
+		<img src="<?php echo $photo_path ?>" alt="$photo">
+	</div>
+	<div>
+		<img src="iimages/<?php echo $photo?>" alt="$photo">
+	</div>
 			<!--End Registration Table-->		
 
 		</div>
@@ -120,7 +134,6 @@ include "config.php";
 <!--PHP Code for Registration Section-->		
 <?php 
 if(isset($_POST['registration-submit'])){
-	echo "Form Submit Success <br>";
 	$employeename=$_POST['employeename'];
 	$gender=$_POST['gender'];
 	$phone=$_POST['phone'];
@@ -128,66 +141,36 @@ if(isset($_POST['registration-submit'])){
 	$address=$_POST['address'];
 	$username=$_POST['username'];
 	$password=$_POST['password'];
-	$valid_status=false;
-	if(!empty($employeename)){
-		$valid_status=true;
+	$photo=$_FILES['photo']['name'];
+	$photo_link=$_FILES['photo']['tmp_name'];
+	$photo_size=$_FILES['photo']['size'];
+	$photo_path="images/".$photo;
+	$imgExplode=explode('.', $photo);
+	$imgExt=end($imgExplode);
+	$document=$_FILES['document']['name'];
+	$document_link=$_FILES['document']['tmp_name'];
+	$document_size=$_FILES['document']['size'];
+	$document_path="images/".$document;
+
+
+	if ($photo_size<=300240&&($imgExt=="PNG"||$imgExt=="png"||$imgExt=="JPG"||$imgExt=="jpg")) {
+			$valid_status=true;
+			echo "Valid Image <br>";
+			move_uploaded_file($photo_link, "images/$photo");
+		
 	}else{
 		$valid_status=false;
+		echo "Image size is too large";
 	}
 
-	if(!empty($gender)){
-		$valid_status=true;
+		if ($document_size<300240) {
+			$valid_status=true;
+			echo "Valid Image <br>";
+			move_uploaded_file($document_link, "document/$document");
 	}else{
-		$valid_status=false;
+		echo "Document size is too large";
 	}
 
-	$blk="/^[0]{1}[1]{1}[9]{1}-[0-9]{8}$/";
-	$Gp="/^[0]{1}[1]{1}[7]{1}-[0-9]{8}$/";
-	if(preg_match($blk, $phone)||preg_match($Gp, $phone)) {
-		$valid_status=true;
-		echo("$phone is a valid phone address <br>");
-	}else{
-		$valid_status=false;
-		echo("$phone is Not a valid phone address <br>");
-	}
-
-	if (!empty($email)&&filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		$valid_status=true;
-		echo("$email is a valid email address <br>");
-	} else {
-		$valid_status=false;
-		echo("$email is not a valid email address <br>");
-	}
-
-	if(!empty($address)){
-		$valid_status=true;
-	}else{
-		$valid_status=false;
-	}
-
-	if(!empty($username)){
-		$valid_status=true;
-	}else{
-		$valid_status=false;
-	}
-
-	if(!empty($password)){
-		$valid_status=true;
-	}else{
-		$valid_status=false;
-	}
-
-	if ($valid_status) {
-		$sql_insert="INSERT INTO employee (employeename, gender, phone, email, address, username, password) VALUES ('$employeename', '$gender', '$phone','$email', '$address', '$username', '$password')";
-		$x=mysqli_query($conn, $sql_insert);
-		if ($x) {
-			echo "Insert Success";
-		}else{
-			echo "Insertion Failed";
-		}
-	}else{
-		echo "PHP Validation Failed";
-	}
 }else{
 	echo "Form Submit Failed";
 }
@@ -305,7 +288,7 @@ if(isset($_POST['registration-submit'])){
 		<table class="table">
 			<thead class="thead-dark">
 				<tr class="bg-primary">
-					<th colspan="7"><h1>Emoloyee Details</h1></th>
+					<th colspan="9"><h1>Emoloyee Details</h1></th>
 				</tr>
 				<tr>
 					<th>ID</th>
@@ -315,12 +298,14 @@ if(isset($_POST['registration-submit'])){
 					<th>Email</th>
 					<th>Address</th>
 					<th>Username</th>
+					<th>Photo Location</th>
+					<th>Document Location</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php 
 				if($conn){
-					$a="SELECT id,employeename,gender,phone,email,address,username FROM `employee`";
+					$a="SELECT id,employeename,gender,phone,email,address,username,photo,document FROM `employee`";
 					$x=mysqli_query($conn, $a);
 					if (mysqli_num_rows($x) > 0) { 
 						while ($row=mysqli_fetch_assoc($x)) {?>
@@ -332,6 +317,8 @@ if(isset($_POST['registration-submit'])){
 								<td><?php echo $row['email']; ?></td>
 								<td><?php echo $row['address']; ?></td>
 								<td><?php echo $row['username']; ?></td>
+								<td><?php echo $row['photo']; ?></td>
+								<td><?php echo $row['document']; ?></td>
 							</tr>
 							<?php
 						}
